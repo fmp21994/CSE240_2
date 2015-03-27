@@ -1,0 +1,52 @@
+Arrays b1 and b2 should not have the same values. The reason why b1 and b2 have different values is that b1[i]=a[i]/5 is 
+a division of two integers.Thus, the value assigned to b1[i] is an integer. However, b2[i] = b2[i]/5 is a double/int division
+ and the result is double as well.
+
+Output of the execution:
+
+a[0] = 37
+b1[0] = 7.000000
+b2[0] = 7.400000
+a[1] = 36
+b1[1] = 7.000000
+b2[1] = 7.200000
+a[2] = 51
+b1[2] = 10.000000
+b2[2] = 10.200000
+a[3] = 29
+b1[3] = 5.000000
+b2[3] = 5.800000
+a[4] = 7
+b1[4] = 1.000000
+b2[4] = 1.400000
+a[5] = 34
+b1[5] = 6.000000
+b2[5] = 6.800000
+a[6] = 32
+b1[6] = 6.000000
+b2[6] = 6.400000
+a[7] = 11
+b1[7] = 2.000000
+b2[7] = 2.200000
+a[8] = 29
+b1[8] = 5.000000
+b2[8] = 5.800000
+a[9] = 53
+b1[9] = 10.000000
+b2[9] = 10.600000
+a[10] = 98
+b1[10] = 19.000000
+b2[10] = 19.600000
+a[11] = 15
+b1[11] = 3.000000
+b2[11] = 3.000000
+a[12] = 44
+b1[12] = 8.000000
+b2[12] = 8.800000
+a[13] = 81
+b1[13] = 16.000000
+b2[13] = 16.200000
+a[14] = 95
+b1[14] = 19.000000
+b2[14] = 19.000000
+

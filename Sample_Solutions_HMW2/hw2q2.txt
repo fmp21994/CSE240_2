@@ -1,0 +1,43 @@
+2.1) 
+	expected output:
+	f = 7		g = 8
+	x = 1		y = 1
+	i = 10		j = 11
+	x = 1		y = 1 or -39
+	
+2.2)
+	output from Visual Studio:
+	f = 7		g = 8
+	x = 1		y = 1
+	i = 10		j = 11
+	x = 1		y = 1
+
+2.3)
+	output from GCC:
+	f = 7		g = 8
+	x = 1		y = 1
+	i = 10		j = 11
+	x = 1		y = -39
+	
+2.4) 
+	y = mac(i, j); -> y = i*i + j*j - 2*i*j;
+
+2.5)
+	y = mac(++i, ++j); ---> y = ++i*++i + ++j*++j - 2*++i*++j;
+
+2.6) 
+The second output value x is based on a call to a function, namely, "func(++i, ++j)". In this case, the values of ++i and ++j 
+are computed before the function is called, and then those values are inputted into the function.
+ On the other hand, the second output value y is based on the macro call "mac(++i, ++j)". Here, the expressions "++i" and "++j" 
+are directly substituted into the macro's body, which replaces the macro call, and only then are the values of "i" and "j" substituted
+into the expression. When i = 7 and j = 8, x = func(++i, ++j) = func(8,9) = 8^2 + 9^2 - 2*8*9 = 1. On the contrary, when i = 7 and
+j = 8, y = mac(++i, ++j) = i++*i++ + j++*j++ - 2*i++*j++ = 9*9 + 10*10 - 2*10*11 (on the GCC compiler) = -39.
+Thus, x and y can have different values.
+
+2.7) VS and GCC has different order of operations. 
+For example:
+VS applies all the unary operations (++) first, in the order of their appearances before doing any arithmetic calculations at all.
+Thus, in VS, with i=7, j=8 for ++i*++i + ++j*++j - 2*++i*++j; i and j are incremented three times total resulting in
+i = 10 and j = 11, and then the operations are completed: 10*10 + 11*11 - 2*10*11 = 1. 
+On the other hand, GCC calculates the unary operations for the two operands of each operator in pair, and makes the same variable in the operation to have the same value.
+Calculation 

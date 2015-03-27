@@ -1,0 +1,3 @@
+First assign goal time by setting it with current time and add it with wait time,
+then the do while loop begins, then the current time is retrieved and stored in current
+Finally, if goal time > current time loop again, else the loop ends i.e. (goal time <= current time).
